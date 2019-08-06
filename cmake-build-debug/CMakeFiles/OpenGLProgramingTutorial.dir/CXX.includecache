@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.cpp
+Shader.h
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.h
+stdio.h
+-
+
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.h
+string
+-
+iostream
+-
+fstream
+-
+GL/glew.h
+-
+

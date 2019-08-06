@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o CMakeFiles/OpenGLProgramingTutorial.dir/Display.cpp.o CMakeFiles/OpenGLProgramingTutorial.dir/Shader.cpp.o  -o OpenGLProgramingTutorial -lSDL2 -lGLEW -lGL 

@@ -1,0 +1,3 @@
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/OpenGLProgramingTutorial.dir
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/edit_cache.dir
