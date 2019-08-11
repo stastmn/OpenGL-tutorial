@@ -4,19 +4,67 @@
 
 #include "Shader.h"
 #include <stdio.h>
+#include <iostream>
+#include <fstream>
 
 static void CheckShaderError(GLuint shader,GLuint flag,bool isProgram, const std::string& errorMessage);
 static std::string LoadShader(const std:: string& fileName);
-
+static GLuint  CreateShader(const std:: string& text,GLenum shaderType);
 
 Shader::Shader(const std::string &fileName) {
     m_program = glCreateProgram();
-    //m_shaders[0] =
+    m_shaders[0] = CreateShader(LoadShader(fileName+ ".vs"),GL_VERTEX_SHADER);      // .vs - vertex shader file
+    m_shaders[1] = CreateShader(LoadShader(fileName+ ".fs"),GL_FRAGMENT_SHADER);    // /fs - fragment shader
+
+    for(unsigned int i =  0;i <NUM_SHADERS;i++)
+        glAttachShader(m_program, m_shaders[i]);
+
+    //glBindAttribLocation(m_program,0,"position");
+
+    glLinkProgram(m_program);
+    CheckShaderError(m_program,GL_LINK_STATUS,true,"Error: Program linked failed:");
+
+
+    glValidateProgram(m_program);
+    CheckShaderError(m_program,GL_VALIDATE_STATUS,true,"Error: Program is invalid:");
+
+
 }
 
 Shader::~Shader() {
-glDeleteProgram(m_program);
 
+    for(unsigned int i =  0;i <NUM_SHADERS;i++) {
+        glDetachShader(m_program,m_shaders[i]);
+        glDeleteShader(m_shaders[i]);
+    }
+    glDeleteProgram(m_program);
+
+}
+
+static GLuint  CreateShader(const std:: string& text,GLenum shaderType){
+    GLuint  shader = glCreateShader(shaderType);
+
+    if(shader == 0)
+        std::cerr<<"Error: Shader creation failed!"<<std::endl;
+
+    const GLchar* shaderSourceString[1];
+    GLint shaderSourceStringLengths[1];
+
+    shaderSourceString[0] = text.c_str();
+    shaderSourceStringLengths[0] = text.length();
+
+    glShaderSource(shader,1,shaderSourceString,shaderSourceStringLengths);
+    glCompileShader(shader);
+
+    CheckShaderError(shader,GL_COMPILE_STATUS, false,"Error: Shader compilation failed: ");
+    return shader;
+
+}
+
+
+void Shader::Bind() {
+
+    glUseProgram(m_program);
 }
 
 static std::string LoadShader(const std:: string& fileName){
@@ -28,6 +76,7 @@ static std::string LoadShader(const std:: string& fileName){
 
     if(file.is_open()){
         while(file.good()){
+            auto  q = file.is_open();
             getline(file,line);
             output.append(line+"\n");
         }
@@ -44,8 +93,15 @@ static void CheckShaderError(GLuint shader,GLuint flag,bool isProgram, const std
     GLchar  error[1024 ] = {"0"};
 
     if(isProgram)
-        glGetProgramInfoLog(shader, sizeof(error),NULL,error);
+        glGetProgramiv(shader, flag, &success);
     else
-        glGetProgramInfoLog(shader, sizeof(error),NULL,error);
-    std::cerr<<errorMessage<<": '"<<error<<"' \n";
+        glGetShaderiv(shader, flag, &success);
+    if(success == GL_FALSE){
+        if(isProgram)
+            glGetProgramInfoLog(shader, sizeof(error),NULL,error);
+        else
+            glGetProgramInfoLog(shader, sizeof(error),NULL,error);
+        std::cerr<<errorMessage<<": '"<<error<<"' \n";
+    }
+
 }

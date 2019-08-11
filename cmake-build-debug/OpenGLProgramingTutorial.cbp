@@ -90,6 +90,12 @@
 		<Unit filename="/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Display.h">
 			<Option target="OpenGLProgramingTutorial"/>
 		</Unit>
+		<Unit filename="/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Mesh.cpp">
+			<Option target="OpenGLProgramingTutorial"/>
+		</Unit>
+		<Unit filename="/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Mesh.h">
+			<Option target="OpenGLProgramingTutorial"/>
+		</Unit>
 		<Unit filename="/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.cpp">
 			<Option target="OpenGLProgramingTutorial"/>
 		</Unit>

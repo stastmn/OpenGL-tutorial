@@ -5,8 +5,6 @@
 #ifndef OPENGLPROGRAMINGTUTORIAL_SHADER_H
 #define OPENGLPROGRAMINGTUTORIAL_SHADER_H
 #include<string>
-#include <iostream>
-#include <fstream>
 #include <GL/glew.h>
 
 class Shader {

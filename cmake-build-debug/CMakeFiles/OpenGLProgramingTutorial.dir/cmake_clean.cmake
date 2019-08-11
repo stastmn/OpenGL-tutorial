@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o"
   "CMakeFiles/OpenGLProgramingTutorial.dir/Display.cpp.o"
   "CMakeFiles/OpenGLProgramingTutorial.dir/Shader.cpp.o"
+  "CMakeFiles/OpenGLProgramingTutorial.dir/Mesh.cpp.o"
   "OpenGLProgramingTutorial.pdb"
   "OpenGLProgramingTutorial"
 )

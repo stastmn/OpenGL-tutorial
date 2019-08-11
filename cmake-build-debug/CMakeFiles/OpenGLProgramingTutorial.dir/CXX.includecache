@@ -6,19 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.cpp
-Shader.h
-/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.h
-stdio.h
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Display.h
+string
+-
+SDL2/SDL.h
+-
+
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Mesh.h
+glm/glm.hpp
+-
+GL/glew.h
 -
 
 /home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.h
 string
 -
-iostream
+GL/glew.h
 -
-fstream
+
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/main.cpp
+iostream
 -
 GL/glew.h
 -
+Display.h
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Display.h
+Shader.h
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.h
+Mesh.h
+/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Mesh.h
 

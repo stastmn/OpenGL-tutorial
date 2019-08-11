@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Display.cpp" "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/OpenGLProgramingTutorial.dir/Display.cpp.o"
+  "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Mesh.cpp" "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/OpenGLProgramingTutorial.dir/Mesh.cpp.o"
   "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/Shader.cpp" "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/OpenGLProgramingTutorial.dir/Shader.cpp.o"
   "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/main.cpp" "/home/stas/jupyter/programming projects/OpenGLProgramingTutorial/cmake-build-debug/CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o"
   )

@@ -4,9 +4,14 @@
 CMakeFiles/OpenGLProgramingTutorial.dir/Display.cpp.o: ../Display.cpp
 CMakeFiles/OpenGLProgramingTutorial.dir/Display.cpp.o: ../Display.h
 
+CMakeFiles/OpenGLProgramingTutorial.dir/Mesh.cpp.o: ../Mesh.cpp
+CMakeFiles/OpenGLProgramingTutorial.dir/Mesh.cpp.o: ../Mesh.h
+
 CMakeFiles/OpenGLProgramingTutorial.dir/Shader.cpp.o: ../Shader.cpp
 CMakeFiles/OpenGLProgramingTutorial.dir/Shader.cpp.o: ../Shader.h
 
 CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o: ../Display.h
+CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o: ../Mesh.h
+CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o: ../Shader.h
 CMakeFiles/OpenGLProgramingTutorial.dir/main.cpp.o: ../main.cpp
 
